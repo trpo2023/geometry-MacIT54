@@ -1,2 +1,2 @@
-main : main.cpp
-	g++ main.cpp -o main
+geometry : geometry.cpp
+	g++ geometry.cpp -o geometry
