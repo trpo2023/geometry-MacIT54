@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Check codestyle
-        run: git ls-files *.{c,h} | xargs clang-format -i && git diff --exit-code
+        run: git ls-files *.{c,h} | xargs clang-format -i --verbose src/geometry/main.cpp src/libgeometry/parser.cpp src/libgeometry/parser.h src/libgeometry/perimeter_and_area.cpp src/libgeometry/perimeter_and_area.h && git diff --exit-code
 
       - name: Build application
         run: make
