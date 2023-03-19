@@ -1,5 +1,3 @@
-#include <libgeometry/parser.h>
-#include <libgeometry/perimeter_and_area.h>
 #include <iostream>
 #include <cstdlib>
 #include <cstring>
@@ -14,6 +12,8 @@ void check_symbols(char *s, int i) {
         || (s[i] == '.' && (isdigit(s[i - 1]) == 0 || isdigit(s[i + 1]) == 0))) {
             printf("\nInvalid syntax, error at column %d: expected: '<double>'\n", i + 1);
             printf("Your input: %s\n\n", s);
+            exit(1);
+            
         }
 }
 
@@ -26,7 +26,7 @@ void cheking_the_input(char *s) {
             if (k3 != 1) {
                 printf("\nInvalid syntax, error at column %d: expected: ','\n", i3 + 1);
                 printf("Your input: %s\n\n", s);
-                exit(0);
+                exit(1);
             }
         }
     }
@@ -34,11 +34,13 @@ void cheking_the_input(char *s) {
         if (s[i] != circle[i] && i < 6) {
             printf("\nInvalid syntax, error at column %d: expected: 'circle'\n", i + 1);
             printf("Your input: %s\n\n", s);
+            exit(1);
         }
         i1 = i;
         if (s[i] != '(' && i == 6) {
             printf("\nInvalid syntax, error at column %d: expected: '('\n", i + 1);
             printf("Your input: %s\n\n", s);
+            exit(1);
         }
     } 
     if (s[int(strlen(s)) - 1] != ')') { // Cheking the second bracket
@@ -52,6 +54,7 @@ void cheking_the_input(char *s) {
             if (k4 > 1) {
                 printf("\nInvalid syntax, error at column %d: expected: '<double>'\n", i + 1);
                 printf("Your input: %s\n\n", s);
+                exit(1);
             }
         }
     }
@@ -63,6 +66,7 @@ void cheking_the_input(char *s) {
             if (k1 > 1) {
                 printf("\nInvalid syntax, error at column %d: expected: '<double>'\n", i + 1);
                 printf("Your input: %s\n\n", s);
+                exit(1);
             }
         }
     }
@@ -73,6 +77,7 @@ void cheking_the_input(char *s) {
             if (k2 > 1) {
                 printf("\nInvalid syntax, error at column %d: expected: '<double>'\n", i + 1);
                 printf("Your input: %s\n\n", s);
+                exit(1);
             }
         }
     }

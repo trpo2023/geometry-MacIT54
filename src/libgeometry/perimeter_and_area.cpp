@@ -1,5 +1,3 @@
-#include <libgeometry/perimeter_and_area.h>
-#include <libgeometry/parser.h>
 #include <iostream>
 #include <cstring>
 #include <cstdlib>
