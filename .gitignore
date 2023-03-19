@@ -3,9 +3,14 @@
 *.o
 *.directory
 *.DS_Store
+*._.DS_Store
 *.AppleDouble
 *.LSOverride
 *.exe
-main
-geometry
+*.d
+*.out
+.vscode
+bin/geometry
+
+
 
