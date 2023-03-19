@@ -8,7 +8,7 @@
 int main() {
     std::cout << "\n-------Welcome to program-------\n";
     std::cout << "\n----Please, input the shape-----\n";
-    char s1[100] = "circle(0 0, 1.5)";
+    char s1[100] = "circle(0 0.0, 1.5)";
     char s2[100] = "circle(0.3 0, 2.57)";
     cheking_the_input(s1);
     perimeter_and_area(s1);

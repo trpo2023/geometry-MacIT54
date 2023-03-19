@@ -1,16 +1,9 @@
-*.swo
-*.swp
 *.o
-*.directory
-*.DS_Store
-*._.DS_Store
-*.AppleDouble
-*.LSOverride
-*.exe
 *.d
 *.out
+*.swp
 .vscode
-bin/geometry
+
 
 
 
