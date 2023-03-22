@@ -3,8 +3,6 @@ LIB_NAME = libgeometry
 
 CFLAGS = -Wall -Werror
 CPPFLAGS = -I src -MP -MMD
-LDFLAGS =
-LDLIBS =
 CC = g++
 
 BIN_DIR = bin
@@ -28,7 +26,6 @@ DEPS = $(APP_OBJECTS:.o=.d) $(LIB_OBJECTS:.o=.d)
 SRCS := $(shell find . -type f -name '*.cpp')
 HDRS := $(shell find . -type f -name '*.h')
 
-.PHONY: all
 all: $(APP_PATH)
 
 -include $(DEPS)
@@ -42,7 +39,6 @@ $(LIB_PATH): $(LIB_OBJECTS)
 $(OBJ_DIR)/%.o: %.cpp
 	$(CC) -c $(CFLAGS) $(CPPFLAGS) $< -o $@
 
-.PHONY: clean
 clean:
 	$(RM) $(APP_PATH) $(LIB_PATH)
 	find $(OBJ_DIR) -name '*.o' -exec $(RM) '{}' \;
@@ -50,3 +46,5 @@ clean:
 	
 format:
 	clang-format -i $(SRCS) $(HDRS)
+	
+.PHONY: all clean format
