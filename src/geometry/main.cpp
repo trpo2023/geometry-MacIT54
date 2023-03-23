@@ -1,5 +1,6 @@
 #include <libgeometry/parser.h>
 #include <libgeometry/perimeter_and_area.h>
+#include <iostream>
 
 int main()
 {
