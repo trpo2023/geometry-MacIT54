@@ -1,7 +1,7 @@
-#include <iostream>
-#include <cstring>
 #include <cstdlib>
+#include <cstring>
 #include <ctype.h>
+#include <iostream>
 
 #define PI 3.1415926535
 

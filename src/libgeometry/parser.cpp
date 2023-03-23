@@ -1,9 +1,10 @@
-#include <iostream>
 #include <cstdlib>
 #include <cstring>
 #include <ctype.h>
+#include <iostream>
 
-void check_symbols(char *s, int i) {
+void check_symbols(char *s, int i) 
+{
     if ((isdigit(s[i]) == 0 && s[i] != '.' && s[i] != ' ' && s[i] != ',') 
         || ((s[i] == '.' && s[i + 1] == '.') || (s[i] == '.' && s[i - 1] == '.')) 
         || (isdigit(s[i]) == 0 && s[i - 1] == '.' && s[i + 1 == '.'])
@@ -17,7 +18,8 @@ void check_symbols(char *s, int i) {
         }
 }
 
-void cheking_the_input(char *s) {
+void cheking_the_input(char *s) 
+{
     char circle[7] = "circle";
     int i, i1, i2, i4, k1 = 0, k2 = 0, k3 = 0, k4 = 0;
     for (int i3 = 0; i3 < 100; i3++) {

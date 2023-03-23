@@ -1,11 +1,8 @@
 #include <libgeometry/parser.h>
 #include <libgeometry/perimeter_and_area.h>
-#include <iostream>
-#include <cstring>
-#include <ctype.h>
-#include <cstdlib>
 
-int main() {
+int main()
+{
     std::cout << "\n-------Welcome to program-------\n";
     std::cout << "\n----Please, input the shape-----\n";
     char s1[100] = "circle(0 0.0, 1.5)";
@@ -14,9 +11,6 @@ int main() {
     perimeter_and_area(s1);
     cheking_the_input(s2);
     perimeter_and_area(s2);
+    
     return 0;
 }
-
-
-
-
