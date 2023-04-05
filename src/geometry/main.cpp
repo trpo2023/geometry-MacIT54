@@ -12,6 +12,6 @@ int main()
     perimeter_and_area(s1);
     cheking_the_input(s2);
     perimeter_and_area(s2);
-    
+
     return 0;
 }
