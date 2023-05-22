@@ -49,7 +49,6 @@ $(LIB_PATH): $(LIB_OBJECTS)
 $(OBJ_DIR)/%.o: %.cpp
 	$(CC) -c $(CFLAGS) $(CPPFLAGS) $< -o $@
 
-
 $(BIN_)/$(TEST_OUT_NAME)/$(TEST_OUT_NAME): $(TEST_OBJECTS)
 	$(CC) $(TEST_OBJECTS) -I$(THIRDPARTY_DIR) -I$(LIB_HEADERS_DIR) -L$(BIN_)/$(TARGET_OUT_NAME) -l$(TARGET_OUT_NAME) -w -o $@
 
@@ -71,8 +70,5 @@ clean:
 	
 format:
 	clang-format -i $(SRCS) $(HDRS)
-	
-a:
-	echo $(wildcard TEST_SRC_DIR/*.cpp)
 
 .PHONY: all clean format test
