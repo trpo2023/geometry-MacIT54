@@ -21,8 +21,8 @@ CTEST(ctest, CHECK_AREA) {
 }
 
 CTEST(ctest, CHECK_INTERSECTION) {
-  point a[2] = {10, 10, 1.5, 0, 0, 1};
+  point a[n] = {10, 10, 1.5, 0, 0, 1, 0, 10, 1.5};
   double expected = 0;
-  double result = intersect(a);
+  double result = intersect(a, 0, 0);
   ASSERT_EQUAL(expected, result);
 }
